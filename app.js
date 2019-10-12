@@ -1,5 +1,7 @@
 var score = 0;
 var percent = 0;
+var boardX = 44;
+var boardY = 11;
 
 var tBody = document.querySelector("tbody");
 var scoreCounter = document.querySelector("h2");
@@ -14,6 +16,7 @@ var player = {
     x: 0
 };
 
+//Vectors
 var direction = [
     { y: -1, x: 0, valid: false }, //North
     { y: -1, x: 1, valid: false }, //NorthEast
@@ -28,7 +31,7 @@ var direction = [
 init();
 
 function init() {
-    createSize(11, 44);
+    createSize(boardY, boardX);
     var yVal = Math.floor(Math.random() * board.length);
     var xVal = Math.floor(Math.random() * board[0].length);
     setPlayer(yVal, xVal);
@@ -81,11 +84,12 @@ function setPlayer(yValue, xValue) {
     node[n].innerHTML = "!";
     node[n].style.color = "Black";
     node[n].style.backgroundColor = "Cornsilk";
-    console.log(player.y);
-    console.log(player.x);
+    // console.log(player.y);
+    // console.log(player.x);
 }
 
 function setValidMoves() {
+    var gameStatus = true;
     for (let i = 0; i < 8; i++) {
         direction[i].valid = false;
         var xNew = player.x + direction[i].x;
@@ -114,6 +118,7 @@ function setValidMoves() {
                         if (j === distance) {
                             direction[i].valid = true;
                             highlight(coordinates);
+                            gameStatus = false;
                         }
                     } else {
                         break;
@@ -121,7 +126,11 @@ function setValidMoves() {
                 }
             }
         }
-        console.log(direction[i].valid);
+        // console.log(direction[i].valid);
+    }
+    console.log(gameStatus);
+    if (gameStatus) {
+        setTimeout(gameOver, 100)
     }
 }
 
@@ -147,15 +156,19 @@ function move(dir) {
                 removeNodes(coordinates);
                 unHighlight();
                 setValidMoves();
-                scoreCounter.innerHTML = (score * 7);
-                console.log(percent);
-                progressBar.innerHTML = (percent.toString(10) + "%");
-                progressBar.style.width = (percent.toString(10) + "%");
+                scoreCounter.innerHTML = score * 7;
+                // console.log(percent);
+                progressBar.innerHTML = percent.toString(10) + "%";
+                progressBar.style.width = percent.toString(10) + "%";
             }
         } else {
-            throw "Something went wrong error code: 849";
+            throw "Something went wrong error code: 379";
         }
     }
+}
+
+function gameOver() {
+    alert("Gameover");
 }
 
 function highlight(arr) {
@@ -177,7 +190,7 @@ function removeNodes(arr) {
 
 function unHighlight() {
     var nodes = document.querySelectorAll(".inRange");
-    nodes.forEach(function (node) {
+    nodes.forEach(function(node) {
         node.classList.remove("inRange");
     });
 }
@@ -193,7 +206,7 @@ function printBoard() {
         board[i].forEach(function(element) {
             string += element + " ";
         });
-        console.log(string);
+        // console.log(string);
     }
 }
 
