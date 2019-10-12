@@ -21,7 +21,7 @@ th {
     border-radius: 10px;
 }
 
-hr{
+hr {
     margin: 0.6em;
 }
 
@@ -61,16 +61,16 @@ div.card.card-body {
     margin: 1rem;
 }
 
-.inRange{
+.inRange {
     -webkit-animation: bgcolor 6s infinite;
     animation: bgcolor 6s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
 }
 
-.invisible{
-    color: #343A40;
-    background-color: #343A40;
+.invisible {
+    color: #343a40;
+    background-color: #343a40;
 }
 
 @keyframes bgcolor {
@@ -81,36 +81,36 @@ div.card.card-body {
         background-color: #000;
     }
     100% {
-        background-color: #343A40;
+        background-color: #343a40;
     }
 }
 
-span{
-    transition: 35s ease-out; 
+span {
+    transition: 35s ease-out;
     cursor: default;
 }
 
-span:nth-child(1):hover{
+span:nth-child(1):hover {
     color: rgb(162, 0, 255);
-    transition: 0s ease-out; 
+    transition: 0s ease-out;
 }
 
-span:nth-child(2):hover{
+span:nth-child(2):hover {
     color: rgb(255, 208, 0);
-    transition: 0s ease-out; 
+    transition: 0s ease-out;
 }
 
-span:nth-child(3):hover{
+span:nth-child(3):hover {
     color: rgb(0, 217, 255);
-    transition: 0s ease-out; 
+    transition: 0s ease-out;
 }
 
-span:nth-child(4):hover{
+span:nth-child(4):hover {
     color: rgb(255, 0, 0);
-    transition: 0s ease-out; 
+    transition: 0s ease-out;
 }
 
-span:nth-child(5):hover{
+span:nth-child(5):hover {
     color: rgb(60, 255, 0);
-    transition: 0s ease-out; 
+    transition: 0s ease-out;
 }

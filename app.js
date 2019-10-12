@@ -130,7 +130,7 @@ function setValidMoves() {
     }
     console.log(gameStatus);
     if (gameStatus) {
-        setTimeout(gameOver, 100)
+        setTimeout(gameOver, 100);
     }
 }
 
