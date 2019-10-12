@@ -21,6 +21,10 @@ th {
     border-radius: 10px;
 }
 
+hr{
+    margin: 0.6em;
+}
+
 .table th {
     padding: 0px;
     margin: 0 auto;
