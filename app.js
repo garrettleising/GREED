@@ -162,6 +162,7 @@ function highlight(arr) {
     var nodes = document.querySelectorAll("td");
     for (var i = 0; i < arr.length; i += 2) {
         var n = arrayConverter(arr[i], arr[i + 1]);
+        nodes[n].classList.remove("inRange");
         nodes[n].classList.add("inRange");
     }
 }
@@ -170,7 +171,6 @@ function removeNodes(arr) {
     var nodes = document.querySelectorAll("td");
     for (var i = 0; i < arr.length; i += 2) {
         var n = arrayConverter(arr[i], arr[i + 1]);
-        nodes[n].classList.remove("inRange");
         nodes[n].classList.add("invisible");
     }
 }

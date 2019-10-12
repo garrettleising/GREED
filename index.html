@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Document</title>
+        <title>GREED</title>
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -16,9 +16,80 @@
     <body>
         <div class="container">
             <div class="jumbotron text-center">
-                <h1 class="display-1">GREED</h1>
+                <h1 class="display-1">
+                    <span>G</span><span>R</span><span>E</span><span>E</span
+                    ><span>D</span>
+                </h1>
                 <button
-                    class="btn btn-success btn-sm"
+                    type="button"
+                    class="btn btn-info btn-sm"
+                    data-toggle="modal"
+                    data-target="#ModalCenter"
+                >
+                    Description
+                </button>
+
+                <div
+                    class="modal fade bd-example-modal-lg"
+                    id="ModalCenter"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="ModalCenterTitle"
+                    aria-hidden="true"
+                >
+                    <div
+                        class="modal-dialog modal-dialog-centered modal-lg"
+                        role="document"
+                    >
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5
+                                    class="modal-title"
+                                    id="exampleModalLongTitle"
+                                >
+                                    Welcome to GREED
+                                </h5>
+                                <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Close"
+                                >
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                The object of Greed is to erase as much of the
+                                screen as possible by moving around in a grid of
+                                numbers. To move your cursor, simply use your
+                                arrow keys or the the 'wedcxzaq' keys. Your
+                                location is signified by the ! symbol.
+
+                                <hr />
+
+                                w = Up | e = UpRight | d = Right | c =DownRight
+                                | x = Down | z = DownLeft | a = Left | q =
+                                UpLeft
+
+                                <hr />
+
+                                When you move in a direction, you erase N number
+                                of grid squares in that direction, N being the
+                                first number in that direction. Your score
+                                reflects the total number of squares eaten.
+
+                                <hr />
+
+                                Greed will not let you make a move that would
+                                have placed you off the grid or over a
+                                previously eaten square. If no valid moves
+                                exist, your game ends.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="btn btn-info btn-sm"
                     type="button"
                     data-toggle="collapse"
                     data-target="#collapseOptions"
@@ -36,13 +107,13 @@
                             <button class="btn btn-primary btn-lg">
                                 Small
                             </button>
-                            <button class="btn btn-primary btn-lg">
+                            <button class="btn btn-success btn-lg">
                                 Medium
                             </button>
-                            <button class="btn btn-primary btn-lg">
+                            <button class="btn btn-warning btn-lg">
                                 Large
                             </button>
-                            <button class="btn btn-primary btn-lg">
+                            <button class="btn btn-danger btn-lg">
                                 Extra-Large
                             </button>
                         </p>
@@ -77,7 +148,6 @@
                 </div>
             </div>
         </div>
-
         <script
             src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
