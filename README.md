@@ -4,7 +4,6 @@ Terminal game GREED recreated
 
 Open **index.html**  in any browser to start
 
-
 ## Description
 ```
 The object of Greed is to erase as much of the
