@@ -1,6 +1,7 @@
 # GREED
 
 Terminal game GREED recreated
+
 Open **index.html**  in any browser to start
 
 
