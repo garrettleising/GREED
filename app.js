@@ -1,11 +1,15 @@
 var score = 0;
 var percent = 0;
-var boardX = 44;
+var boardX = 22;
 var boardY = 11;
 
 var tBody = document.querySelector("tbody");
 var scoreCounter = document.querySelector("h2");
 var progressBar = document.querySelector("div.progress-bar");
+var smallButton = document.querySelector("#smallButton");
+var mediumButton = document.querySelector("#mediumButton");
+var largeButton = document.querySelector("#largeButton");
+var xtraLargeButton = document.querySelector("#xtraLargeButton");
 
 var board = [];
 
@@ -31,6 +35,18 @@ var direction = [
 init();
 
 function init() {
+    var tds = document.querySelectorAll("td");
+    var ths = document.querySelectorAll("th");
+    var trs = document.querySelectorAll("tr");
+    tds.forEach(function (tdNode) {
+        tdNode.parentNode.removeChild(tdNode);
+    });
+    ths.forEach(function (thNode) {
+        thNode.parentNode.removeChild(thNode);
+    });
+    trs.forEach(function (trNode) {
+        trNode.parentNode.removeChild(trNode);
+    });
     createSize(boardY, boardX);
     var yVal = Math.floor(Math.random() * board.length);
     var xVal = Math.floor(Math.random() * board[0].length);
@@ -40,6 +56,7 @@ function init() {
 }
 
 function createSize(rows, cols) {
+    board = [];
     for (var r = 0; r < rows; r++) {
         //Creates row
         var row = [];
@@ -291,4 +308,28 @@ document.addEventListener("keyup", e => {
         }
         deBounce = true;
     }
+});
+
+smallButton.addEventListener("click", e=>{
+    boardX = 22;
+    boardY = 11;
+    init();
+});
+
+mediumButton.addEventListener("click", e=>{
+    boardX = 33;
+    boardY = 11;
+    init();
+});
+
+largeButton.addEventListener("click", e=>{
+    boardX = 44;
+    boardY = 11;
+    init();
+});
+
+xtraLargeButton.addEventListener("click", e=>{
+    boardX = 55;
+    boardY = 11;
+    init();
 });
