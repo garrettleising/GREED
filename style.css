@@ -25,66 +25,6 @@ hr {
     margin: 0.6em;
 }
 
-.table th {
-    padding: 0px;
-    margin: 0 auto;
-}
-
-.table td {
-    border-radius: 7px;
-    padding: 1px;
-    cursor: default;
-}
-
-.table {
-    border-radius: 10px;
-    width: 100%;
-    margin: 0px auto;
-    float: none;
-}
-
-table.table.table-borderless.table-dark {
-    margin: 0px;
-    text-align: center;
-}
-
-#bar {
-    padding: 1rem;
-}
-
-div.jumbotron {
-    padding: 2rem;
-    margin: 0.5rem;
-}
-
-div.card.card-body {
-    margin: 1rem;
-}
-
-.inRange {
-    -webkit-animation: bgcolor 6s infinite;
-    animation: bgcolor 6s infinite;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
-}
-
-.invisible {
-    color: #343a40;
-    background-color: #343a40;
-}
-
-@keyframes bgcolor {
-    0% {
-        background-color: #000;
-    }
-    90% {
-        background-color: #000;
-    }
-    100% {
-        background-color: #343a40;
-    }
-}
-
 span {
     transition: 35s ease-out;
     cursor: default;
@@ -113,4 +53,65 @@ span:nth-child(4):hover {
 span:nth-child(5):hover {
     color: rgb(60, 255, 0);
     transition: 0s ease-out;
+}
+
+table.table.table-borderless.table-dark {
+    margin: 0px;
+    text-align: center;
+}
+
+div.jumbotron {
+    padding: 2rem;
+    margin: 0.5rem;
+}
+
+div.card.card-body {
+    margin: 1rem;
+}
+
+.inRange {
+    -webkit-animation: bgcolor 6s infinite;
+    animation: bgcolor 6s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.invisible {
+    color: #343a40;
+    background-color: #343a40;
+}
+
+.table {
+    border-radius: 10px;
+    width: 100%;
+    margin: 0px auto;
+    float: none;
+}
+
+
+.table th {
+    padding: 0px;
+    margin: 0 auto;
+}
+
+.table td {
+    border-radius: 7px;
+    padding: 1px;
+    cursor: default;
+}
+
+@keyframes bgcolor {
+    0% {
+        background-color: #000;
+    }
+    90% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #343a40;
+    }
+}
+
+#bar {
+    padding: 1rem;
 }
