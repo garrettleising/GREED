@@ -4,16 +4,19 @@ var boardX = 22;
 var boardY = 11;
 
 var tBody = document.querySelector("tbody");
-var scoreCounter = document.querySelector("h2");
 var progressBar = document.querySelector("div.progress-bar");
 var smallButton = document.querySelector("#smallButton");
 var mediumButton = document.querySelector("#mediumButton");
 var largeButton = document.querySelector("#largeButton");
 var xtraLargeButton = document.querySelector("#xtraLargeButton");
+var resetButton = document.querySelector("#resetButton");
+var showBoard = document.querySelector("#showBoard");
+var scoreCounter = document.querySelector("#scoreBoard");
 
 var board = [];
 
 var deBounce = true;
+var gameOVER = false;
 
 var player = {
     y: 0,
@@ -35,16 +38,19 @@ var direction = [
 init();
 
 function init() {
+    gameOVER = false;
+    showBoard.innerHTML = "Welcome!";
+    showBoard.style.color = "White";
     var tds = document.querySelectorAll("td");
     var ths = document.querySelectorAll("th");
     var trs = document.querySelectorAll("tr");
-    tds.forEach(function (tdNode) {
+    tds.forEach(function(tdNode) {
         tdNode.parentNode.removeChild(tdNode);
     });
-    ths.forEach(function (thNode) {
+    ths.forEach(function(thNode) {
         thNode.parentNode.removeChild(thNode);
     });
-    trs.forEach(function (trNode) {
+    trs.forEach(function(trNode) {
         trNode.parentNode.removeChild(trNode);
     });
     createSize(boardY, boardX);
@@ -185,7 +191,10 @@ function move(dir) {
 }
 
 function gameOver() {
-    alert("Gameover");
+    gameOVER = true;
+    showBoard.style.display = "block";
+    showBoard.innerHTML = "GAME OVER!!!";
+    showBoard.style.color = "Crimson";
 }
 
 function highlight(arr) {
@@ -223,7 +232,7 @@ function printBoard() {
         board[i].forEach(function(element) {
             string += element + " ";
         });
-        // console.log(string);
+        console.log(string);
     }
 }
 
@@ -255,81 +264,102 @@ function findColor(val) {
 document.addEventListener("keyup", e => {
     if (deBounce) {
         deBounce = false;
-        if (e.code === "KeyW" || e.code === "ArrowUp") {
+        if (gameOVER) {
+        } else if (e.code === "KeyW" || e.code === "ArrowUp") {
             if (direction[0].valid) {
+                showBoard.style.display = "none";
                 move(0);
             } else {
-                alert("Invalid Move!");
+                showBoard.style.display = "block";
+                showBoard.innerHTML = "Invalid Move!";
             }
         } else if (e.code === "KeyE") {
             if (direction[1].valid) {
+                showBoard.style.display = "none";
                 move(1);
             } else {
-                alert("Invalid Move!");
+                showBoard.style.display = "block";
+                showBoard.innerHTML = "Invalid Move!";
             }
         } else if (e.code === "KeyD" || e.code === "ArrowRight") {
             if (direction[2].valid) {
+                showBoard.style.display = "none";
                 move(2);
             } else {
-                alert("Invalid Move!");
+                showBoard.style.display = "block";
+                showBoard.innerHTML = "Invalid Move!";
             }
         } else if (e.code === "KeyC") {
             if (direction[3].valid) {
+                showBoard.style.display = "none";
                 move(3);
             } else {
-                alert("Invalid Move!");
+                showBoard.style.display = "block";
+                showBoard.innerHTML = "Invalid Move!";
             }
         } else if (e.code === "KeyX" || e.code === "ArrowDown") {
             if (direction[4].valid) {
+                showBoard.style.display = "none";
                 move(4);
             } else {
-                alert("Invalid Move!");
+                showBoard.style.display = "block";
+                showBoard.innerHTML = "Invalid Move!";
             }
         } else if (e.code === "KeyZ") {
             if (direction[5].valid) {
+                showBoard.style.display = "none";
                 move(5);
             } else {
-                alert("Invalid Move!");
+                showBoard.style.display = "block";
+                showBoard.innerHTML = "Invalid Move!";
             }
         } else if (e.code === "KeyA" || e.code === "ArrowLeft") {
             if (direction[6].valid) {
+                showBoard.style.display = "none";
                 move(6);
             } else {
-                alert("Invalid Move!");
+                showBoard.style.display = "block";
+                showBoard.innerHTML = "Invalid Move!";
             }
         } else if (e.code === "KeyQ") {
             if (direction[7].valid) {
+                showBoard.style.display = "none";
                 move(7);
             } else {
-                alert("Invalid Move!");
+                showBoard.style.display = "block";
+                showBoard.innerHTML = "Invalid Move!";
             }
         } else {
-            alert("Wrong Key");
+            showBoard.innerHTML = "Wrong Key";
         }
         deBounce = true;
     }
 });
 
-smallButton.addEventListener("click", e=>{
+smallButton.addEventListener("click", e => {
     boardX = 22;
     boardY = 11;
     init();
 });
 
-mediumButton.addEventListener("click", e=>{
+mediumButton.addEventListener("click", e => {
     boardX = 33;
     boardY = 11;
     init();
 });
 
-largeButton.addEventListener("click", e=>{
+largeButton.addEventListener("click", e => {
     boardX = 44;
     boardY = 11;
     init();
 });
 
-xtraLargeButton.addEventListener("click", e=>{
+xtraLargeButton.addEventListener("click", e => {
     boardX = 55;
     boardY = 11;
+    init();
+});
+
+resetButton.addEventListener("click", e => {
     init();
 });

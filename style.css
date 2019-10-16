@@ -25,6 +25,10 @@ hr {
     margin: 0.6em;
 }
 
+h2 {
+    color: white;
+}
+
 span {
     transition: 35s ease-out;
     cursor: default;
@@ -70,10 +74,11 @@ div.card.card-body {
 }
 
 .inRange {
-    -webkit-animation: bgcolor 6s infinite;
+    background-color: #000;
+    /* -webkit-animation: bgcolor 6s infinite;
     animation: bgcolor 6s infinite;
     -webkit-animation-direction: alternate;
-    animation-direction: alternate;
+    animation-direction: alternate; */
 }
 
 .invisible {
@@ -88,7 +93,6 @@ div.card.card-body {
     float: none;
 }
 
-
 .table th {
     padding: 0px;
     margin: 0 auto;
@@ -100,7 +104,7 @@ div.card.card-body {
     cursor: default;
 }
 
-@keyframes bgcolor {
+/* @keyframes bgcolor {
     0% {
         background-color: #000;
     }
@@ -110,7 +114,7 @@ div.card.card-body {
     100% {
         background-color: #343a40;
     }
-}
+} */
 
 #bar {
     padding: 1rem;
