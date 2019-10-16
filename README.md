@@ -1,11 +1,8 @@
 # GREED
-'''
-Terminal game GREED recreated
-'''
+```Terminal game GREED recreated```
 
 ## Description
-```
-The object of Greed is to erase as much of the
+```The object of Greed is to erase as much of the
 screen as possible by moving around in a grid of
 numbers. To move your cursor, simply use your
 arrow keys or the the 'wedcxzaq' keys. Your
@@ -23,5 +20,4 @@ reflects the total number of squares eaten.
 Greed will not let you make a move that would
 have placed you off the grid or over a
 previously eaten square. If no valid moves
-exist, your game ends.
-```
+exist, your game ends.```
