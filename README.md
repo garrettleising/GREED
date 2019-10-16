@@ -1,7 +1,7 @@
 # GREED
-Terminal game GREED recreated
+'''Terminal game GREED recreated'''
 
-##Description
+## Description
 ```
 The object of Greed is to erase as much of the
 screen as possible by moving around in a grid of
