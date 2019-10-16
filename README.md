@@ -1,5 +1,7 @@
 # GREED
-'''Terminal game GREED recreated'''
+'''
+Terminal game GREED recreated
+'''
 
 ## Description
 ```
