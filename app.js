@@ -59,6 +59,11 @@ function init() {
     setPlayer(yVal, xVal);
     printBoard(); // for testing can delete later
     setValidMoves();
+    scoreCounter.innerHTML = 0;
+    score = 0;
+    percent = Math.floor(100 * (score / (board[0].length * board.length)));
+    progressBar.innerHTML = percent.toString(10) + "%";
+    progressBar.style.width = percent.toString(10) + "%";
 }
 
 function createSize(rows, cols) {
@@ -180,7 +185,6 @@ function move(dir) {
                 unHighlight();
                 setValidMoves();
                 scoreCounter.innerHTML = score * 7;
-                // console.log(percent);
                 progressBar.innerHTML = percent.toString(10) + "%";
                 progressBar.style.width = percent.toString(10) + "%";
             }
