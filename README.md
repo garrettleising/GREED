@@ -4,7 +4,9 @@
   <img src="./static/images/greedPreview.png">
 </a>
 
-[Try it!](https://garrettleising.github.io/GREED/index.html)
+<a href="https://garrettleising.github.io/GREED/index.html">
+  <h2>Try It!</h2>
+</a>
 
 ## Description
 
