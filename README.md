@@ -1,6 +1,8 @@
 # GREED
 ### Terminal game GREED recreated
-<img src="./static/images/greedPreview.png">
+<a href="https://garrettleising.github.io/GREED/index.html">
+  <img src="./static/images/greedPreview.png">
+</a>
 
 [Try it!](https://garrettleising.github.io/GREED/index.html)
 
