@@ -1,9 +1,8 @@
 # GREED
 Terminal game GREED recreated
 
-Open **index.html**  in a browser to start
 ## Description
-```
+
 The object of Greed is to erase as much of the
 screen as possible by moving around in a grid of
 numbers. To move your cursor, simply use your
@@ -23,4 +22,5 @@ Greed will not let you make a move that would
 have placed you off the grid or over a
 previously eaten square. If no valid moves
 exist, your game ends.
-```
+
+Was developed to better understand Bootstrap, HTML, and CSS
