@@ -5,7 +5,7 @@
 </a>
 
 <a href="https://garrettleising.github.io/GREED/index.html">
-  <h2>Try It!</h2>
+  <h3>Try It!</h3>
 </a>
 
 ## Description
