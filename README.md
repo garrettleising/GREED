@@ -1,6 +1,8 @@
 # GREED
 Terminal game GREED recreated
 
+(Try it!){https://garrettleising.github.io/GREED/}
+
 ## Description
 
 The object of Greed is to erase as much of the
