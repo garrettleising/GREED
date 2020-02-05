@@ -1,7 +1,6 @@
 # GREED
 Terminal game GREED recreated
-
-(Try it!){https://garrettleising.github.io/GREED/}
+[Try it!](https://garrettleising.github.io/GREED/index.html)
 
 ## Description
 
