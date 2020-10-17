@@ -1,10 +1,10 @@
 # GREED
-### Terminal game GREED recreated
+## Terminal game GREED recreated
 <a href="https://garrettleising.github.io/GREED/index.html" target="_blank">
   <img src="./static/images/greedPreview.png">
 </a>
 
-#### [Try It!](https://garrettleising.github.io/GREED/index.html)
+### [Try It!](https://garrettleising.github.io/GREED/index.html)
 
 ## Description
 
