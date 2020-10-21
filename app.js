@@ -112,8 +112,6 @@ function setPlayer(yValue, xValue) {
     node[n].innerHTML = "!";
     node[n].style.color = "Black";
     node[n].style.backgroundColor = "Cornsilk";
-    // console.log(player.y);
-    // console.log(player.x);
 }
 
 function setValidMoves() {
@@ -154,7 +152,6 @@ function setValidMoves() {
                 }
             }
         }
-        // console.log(direction[i].valid);
     }
     console.log(gameStatus);
     if (gameStatus) {
